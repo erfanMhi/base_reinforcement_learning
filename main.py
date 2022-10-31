@@ -15,8 +15,7 @@ import numpy as np
 from core.algos import BaseAlgo
 from core.utils.configs.base import BaseConfig
 from core.utils.exceptions import GPUNotAvailable
-from experiments.sweeper import BasicSweeper
-from core.utils.typing import GPUID, ArgsObject
+from core.utils.typing import ArgsObject
 from core.utils.recorders import TensorboardRecorder
 from experiments.tuner.basic import BasicTuner
 

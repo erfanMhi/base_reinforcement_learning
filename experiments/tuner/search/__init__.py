@@ -1,4 +1,4 @@
-from experiments.sweeper.search.base import (
+from experiments.tuner.search.base import (
     GridSearch,
     UniformSearch
 )

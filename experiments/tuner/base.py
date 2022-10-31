@@ -19,7 +19,7 @@ from core.algos.base import BaseAlgo
 from core.utils.configs import BaseConfig
 from core.utils.io import load_yaml
 from core.utils.util import get_current_datetime, iterate_nested_dict
-from experiments.sweeper.search import GridSearch, UniformSearch
+from experiments.tuner.search import GridSearch, UniformSearch
 from core.utils.typing import ScalarType
 
 # This list is only targeted toward search keys used in YAML files.

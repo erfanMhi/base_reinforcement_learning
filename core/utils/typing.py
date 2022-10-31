@@ -27,3 +27,6 @@ ActionType = Union[TensorType, ScalarType]
 RewardType = float
 TerminalType = bool
 RewardType = ScalarType
+
+GPUID = Union[int, str]
+ArgsObject = argparse.Namespace

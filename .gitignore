@@ -127,3 +127,14 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# unrelated files
+.DS_Store
+
+# config files
+*.yaml
+
+# results files
+*.log
+*.logs
+*tfevents*
