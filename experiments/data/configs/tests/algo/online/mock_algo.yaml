@@ -1,7 +1,7 @@
 config_class: DQNConfig
 
 meta-params:
-    log_dir: 'experiments/results/tests/algo/online/mock_algo'
+    log_dir: 'experiments/data/results/tests/algo/online/mock_algo'
     algo_class: OnlineAlgo
     agent_class: MockAgent
     env_class: MockEpisodicEnv

@@ -1,7 +1,7 @@
 config_class: DQNConfig
 
 meta-params:
-    log_dir: 'experiments/results/experiments_v0/online/cart_pole/dqn/sweep'
+    log_dir: 'experiments/data/results/experiments_v0/online/cart_pole/dqn/sweep'
     algo_class: OnlineAlgo
     agent_class: DQNAgent
     env_class: CartPoleEnv

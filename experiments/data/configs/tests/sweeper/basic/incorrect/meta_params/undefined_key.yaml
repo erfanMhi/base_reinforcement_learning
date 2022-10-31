@@ -1,7 +1,7 @@
 config_class: DQNConfig
 
 meta-params:
-    save_dir: 'experiments/results/test_v0/dqn'
+    save_dir: 'experiments/data/results/test_v0/dqn'
     algo_class: MockAlgo
     undefined_key: AlgoClass
     agent_class: DQNAgent

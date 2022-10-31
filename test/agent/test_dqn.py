@@ -11,7 +11,7 @@ from experiments.tuner import BasicTuner
 
 #FIX: Pytest get stuck when I'm running multiprocessing tests on pooling (i.e., increasing the number of workers to 2 or more)
 @pytest.mark.parametrize("args", [{
-    'config_file': Path('experiments/configs/tests/agent/dqn/cartpole.yaml'),
+    'config_file': Path('experiments/data/configs/tests/agent/dqn/cartpole.yaml'),
     'gpu': False,
     'verbose': logging.INFO,
     'workers': 1, 

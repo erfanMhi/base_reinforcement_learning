@@ -1,7 +1,7 @@
 config_class: DQNConfig
 
 meta-params:
-    log_dir: 'experiments/results/tests/agent/dqn/cartpole'
+    log_dir: 'experiments/data/results/tests/agent/dqn/cartpole'
     algo_class: OnlineAlgo
     agent_class: DQNAgent
     env_class: CartPoleEnv

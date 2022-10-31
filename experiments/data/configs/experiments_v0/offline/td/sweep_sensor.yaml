@@ -1,7 +1,7 @@
 config_class: DQNConfig
 
 meta-params:
-    log_dir: 'experiments/results/test_v0/dqn/sweep/'
+    log_dir: 'experiments/data/results/test_v0/dqn/sweep/'
     algo_class: OfflineAlgo
     agent_class: DQNAgent
     env_class: OfflineEnv
