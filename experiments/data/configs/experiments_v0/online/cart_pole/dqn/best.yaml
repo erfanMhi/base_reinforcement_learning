@@ -1,0 +1,42 @@
+config_class: DQNConfig
+
+meta-params:
+    log_dir: 'experiments/results/experiments_v0/online/cart_pole/dqn/best'
+    algo_class: OnlineAlgo
+    agent_class: DQNAgent
+    env_class: CartPoleEnv
+
+algo-params:
+
+    discount: 0.99
+
+    # agent parameters
+    exploration:
+        name: epsilon-greedy
+        epsilon: 0.1
+
+    model:
+        name: fully-connected
+        hidden_layers: [16, 16, 16]        
+        activation: relu
+
+    target_net:
+        name: discrete
+        update_frequency: 32
+
+    optimizer: 
+        name: adam
+        lr: 0.001
+
+    loss:
+        name: mse
+
+    # replay buffer parameters
+    memory_size: 2500
+    batch_size: 16
+    update_per_step: 1
+    max_steps: 100000
+ 
+    # logging parameters
+    log_interval: 1000
+    returns_queue_size: 100

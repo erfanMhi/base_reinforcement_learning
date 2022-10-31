@@ -1,0 +1,43 @@
+config_class: DQNConfig
+
+meta-params:
+    log_dir: 'experiments/results/tests/algo/online/mock_algo'
+    algo_class: OnlineAlgo
+    agent_class: MockAgent
+    env_class: MockEpisodicEnv
+
+algo-params:
+
+    discount: 0.99
+
+    # agent parameters
+    exploration:
+        name: epislon-greedy
+        epsilon: 0.1
+
+    model:
+        name: fully-connected
+        hidden_layers: 32
+        activation: relu
+
+    target_net:
+        name: discrete
+        update_frequency: 8
+
+    optimizer: 
+        name: adam
+        lr: 1e-4
+        momentum: 0.9
+
+    loss:
+        name: mse
+
+    # replay buffer parameters
+    memory_size: 5
+    batch_size: 8
+    update_per_step: 1
+    max_steps: 20
+
+    # logging parameters
+    log_interval: 1
+    returns_queue_size: 100

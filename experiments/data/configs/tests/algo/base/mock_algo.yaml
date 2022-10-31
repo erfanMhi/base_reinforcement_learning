@@ -1,0 +1,41 @@
+config_class: DQNConfig
+
+meta-params:
+    log_dir: 'experiments/data/results/tests/algo_tests/base_algo/mock_dqn.yaml'
+    algo_class: MockAlgo
+    agent_class: DQNAgent
+    env_class: CartPoleEnv
+
+algo-params:
+
+    # agent parameters
+    discount: 0.99
+
+    # agent parameters
+    exploration:
+        type: epislon-greedy
+        epsilon: 0.1
+        
+    optimizer: 
+        type: adam
+        lr: 
+            grid_search: [1e-3, 1e-4, 1e-5, 1e-6]
+        momentum: 0.9
+
+    target_net:
+        type: discrete 
+        update_frequency: 
+            grid_search: [8, 16]
+
+    model: 
+        type: fully-connected
+        hidden_layers: [32, 32]
+        activation: relu
+
+    # replay buffer parameters
+    memory_size: 100000
+    batch_size: 32
+
+    # limits
+    max_steps: 100000
+    log_interval: 1

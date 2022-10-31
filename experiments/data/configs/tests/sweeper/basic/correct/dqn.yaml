@@ -1,0 +1,37 @@
+config_class: DQNConfig
+
+meta-params:
+    log_dir: 'test/data/results/algo_tests/dqn'
+    algo_class: MockAlgo
+    agent_class: DQNAgent
+    env_class: OfflineEnv
+
+algo-params:
+
+    # environment parameters
+    discount: 0.99
+
+    # agent parameters
+    exploration:
+        type: epislon-greedy
+        epsilon: 0.1
+        
+    optimizer: 
+        type: adam
+        lr: 
+            # grid_search: [0.001, 0.0003, 0.0001, 0.00003]
+            grid_search: [0.0001, 0.001]
+        momentum: 0.9
+
+    target_net:
+        type: discrete 
+        update_frequency: 
+            grid_search: [8, 16]
+
+    # replay buffer parameters
+    memory_size: 100000
+    batch_size: 32
+
+    # limits
+    max_steps: 100000
+    log_interval: 1
