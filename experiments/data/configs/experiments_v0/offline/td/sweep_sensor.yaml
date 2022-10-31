@@ -1,0 +1,47 @@
+config_class: DQNConfig
+
+meta-params:
+    log_dir: 'experiments/data/results/test_v0/dqn/sweep/'
+    algo_class: OfflineAlgo
+    agent_class: DQNAgent
+    env_class: OfflineEnv
+
+algo-params:
+
+    # environment parameters
+    discount: 0.99
+
+    # agent parameters
+    exploration:
+        type: epislon-greedy
+        epsilon: 0.1
+        
+    optimizer: 
+        type: adam
+        lr: 
+            grid_search: [1e-6, 1e-5, 1e-4]
+        momentum: 0.9
+
+    ml_model:
+      type: fully_connected
+      hidden_layers: [512, 512, 512]
+      activation: relu
+
+    target_net:
+        type: discrete 
+        update_frequency: 
+            grid_search: [8, 16]
+
+    # replay buffer parameters
+    memory_size: 100000
+    batch_size: 512
+
+    # limits
+    max_steps: 100000
+    log_interval: 1
+
+
+  batch_size: 512
+  agent_epochs: 500
+  base_epochs: 1
+  early_stop': 10
