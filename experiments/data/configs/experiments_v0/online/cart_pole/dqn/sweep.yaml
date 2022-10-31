@@ -23,23 +23,21 @@ algo-params:
     target_net:
         name: discrete
         update_frequency: 
-            grid_search: [32, 64, 128, 256]
+            grid_search: [32, 64]
 
     optimizer: 
         name: adam
-        lr: 
-          grid_search: [0.001, 0.0003]
+        lr: 0.001
 
     loss:
         name: mse
 
     # replay buffer parameters
-    memory_size: 
-        grid_search: [1000, 2500, 5000, 10000]
+    memory_size: 2500
     batch_size: 
-        grid_search: [8, 16, 32, 64, 128]
+        grid_search: [16, 32]
     update_per_step: 1
-    max_steps: 100000
+    max_steps: 200000
 
     # logging parameters
     log_interval: 1000
