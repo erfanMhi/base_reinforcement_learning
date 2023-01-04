@@ -96,7 +96,7 @@ All of this contributes to a single idea: you shouldn't spend too much time writ
 -------------
 This section gets you through the requirements and installation of this library.
 ### Prerequisites
-  All the prerequisites of this library are outlined in [setup.cfg](https://github.com/erfanMhi/base_reinforcement_learning/setup.cfg) file.
+  All the prerequisites of this library are outlined in [setup.cfg](https://github.com/erfanMhi/base_reinforcement_learning/blob/aa3de372d37ccdec45b471b86022e408a58ad81d/setup.cfg) file.
 ### Installation
 
 To set up your project, you should follow these steps:
